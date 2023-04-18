@@ -1,0 +1,20 @@
+The *licensing* database
+========================
+
+.. _introdata-label:
+
+Data
+----
+
+
+.. _introsample-label:
+
+Sample
+------
+
+
+Database Structure
+------------------
+
+.. image:: biopharm_contracts_v1.0.drawio.png
+   :width: 600

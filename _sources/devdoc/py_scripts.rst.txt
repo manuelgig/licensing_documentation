@@ -1,0 +1,45 @@
+The Python files & code
+=======================
+
+.. danger ::
+
+  We strongly suggest that you contact the db creator
+  (manuel.gigena@kuleuven.be) prior to modifying the *.py* files.
+
+We used python to build the database. All scripts are located in the
+folder named *./00_py_scripts*, and we wrote separate scripts for each part of
+the database--- i.e., education, experience, construction of tables, web
+scrapers, etc--- as well as for functions.
+
+The *.py* files
+----------------
+
+The files whose names begin with *<Sxx>* contain the scripts for different parts,
+the files whose names begin with *<fxx>* contain functions which are called
+from the *<Sxx>* files.
+
+The contents of the *.py* files are lightly documented, but we discourage users
+from modifying them in any way.
+
+Updating the database
+---------------------
+
+The csv files in the *./04_tables* folder are not updated automatically after a
+change in the parameter file (e.g., if you modify the dictionary
+files that sort job titles into functional areas by adding new keywords).
+There are inter-dependencies between the *.py* files, hence we suggest you
+execute them in the following order:
+
+#. S07_matching_company_names.py
+#. S01_match_school_names
+#. S09_make_tables
+#. S14_make_dyads_tables
+#. S15_make_documentation_tables
+#. S16_ext_1
+
+.. admonition :: Updating the complete db
+
+  The complete db, tables and documentation can be updated at once running
+  the *S17_make_be_founders_db.py* file. This executes the *.py* files in the right
+  order and with their parameters set at their default value (e.g., the
+  thresholds for the fuzzy matching).

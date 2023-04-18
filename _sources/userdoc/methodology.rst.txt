@@ -1,0 +1,14 @@
+.. _methodology-label:
+
+Methodology
+###########
+
+Sample and primary data sources
+*******************************
+
+
+Construction of the database
+****************************
+
+
+.. bibliography::

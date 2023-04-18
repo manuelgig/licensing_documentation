@@ -1,0 +1,6 @@
+.. _quickstart-label:
+
+Quick start
+===========
+
+[tbd]

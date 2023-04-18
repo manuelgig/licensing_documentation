@@ -1,0 +1,11 @@
+The documentation files
+=======================
+
+.. danger ::
+
+  We strongly suggest that you contact the db creator
+  (manuel.gigena@kuleuven.be) prior to modifying the documentation source
+  files.
+
+We built this documentation with Sphinx using a theme provided by Read the docs.
+All source files files are located in the folder *./13_documentation/source*.

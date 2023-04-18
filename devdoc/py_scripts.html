@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. The Python files &amp; code &mdash; licensing 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mystyle.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> licensing
+            <img src="../_static/KULEUVEN_FEB_Logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../userdoc/user_main.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start/qs_main.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/dl_main.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/git_main.html">Get the Git Repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">licensing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">1. </span>The Python files &amp; code</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/devdoc/py_scripts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-python-files-code">
+<h1><span class="section-number">1. </span>The Python files &amp; code<a class="headerlink" href="#the-python-files-code" title="Permalink to this headline"></a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>We strongly suggest that you contact the db creator
+(<a class="reference external" href="mailto:manuel&#46;gigena&#37;&#52;&#48;kuleuven&#46;be">manuel<span>&#46;</span>gigena<span>&#64;</span>kuleuven<span>&#46;</span>be</a>) prior to modifying the <em>.py</em> files.</p>
+</div>
+<p>We used python to build the database. All scripts are located in the
+folder named <em>./00_py_scripts</em>, and we wrote separate scripts for each part of
+the database— i.e., education, experience, construction of tables, web
+scrapers, etc— as well as for functions.</p>
+<section id="the-py-files">
+<h2><span class="section-number">1.1. </span>The <em>.py</em> files<a class="headerlink" href="#the-py-files" title="Permalink to this headline"></a></h2>
+<p>The files whose names begin with <em>&lt;Sxx&gt;</em> contain the scripts for different parts,
+the files whose names begin with <em>&lt;fxx&gt;</em> contain functions which are called
+from the <em>&lt;Sxx&gt;</em> files.</p>
+<p>The contents of the <em>.py</em> files are lightly documented, but we discourage users
+from modifying them in any way.</p>
+</section>
+<section id="updating-the-database">
+<h2><span class="section-number">1.2. </span>Updating the database<a class="headerlink" href="#updating-the-database" title="Permalink to this headline"></a></h2>
+<p>The csv files in the <em>./04_tables</em> folder are not updated automatically after a
+change in the parameter file (e.g., if you modify the dictionary
+files that sort job titles into functional areas by adding new keywords).
+There are inter-dependencies between the <em>.py</em> files, hence we suggest you
+execute them in the following order:</p>
+<ol class="arabic simple">
+<li><p>S07_matching_company_names.py</p></li>
+<li><p>S01_match_school_names</p></li>
+<li><p>S09_make_tables</p></li>
+<li><p>S14_make_dyads_tables</p></li>
+<li><p>S15_make_documentation_tables</p></li>
+<li><p>S16_ext_1</p></li>
+</ol>
+<div class="admonition-updating-the-complete-db admonition">
+<p class="admonition-title">Updating the complete db</p>
+<p>The complete db, tables and documentation can be updated at once running
+the <em>S17_make_be_founders_db.py</em> file. This executes the <em>.py</em> files in the right
+order and with their parameters set at their default value (e.g., the
+thresholds for the fuzzy matching).</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Manuel Gigena.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

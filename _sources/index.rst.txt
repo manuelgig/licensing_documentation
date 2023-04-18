@@ -1,0 +1,46 @@
+.. licensing documentation master file, created by
+   sphinx-quickstart on Mon Apr 18 08:20:21 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+########################
+The *licensing* database
+########################
+
+This database contains rich, detailed information from a large set of
+biopharma licensing contracts, including:
+
+* contract data and metadata: parties involved, deal details, etc
+* contract contents (parsed and segmented by sentence, paragraph, sections,
+  etc.), ready to perform text-based analysis
+* NER and content extraction: firms, organizations, universities, dates,
+  amounts, etc.
+* IP data: patent documents and patent data
+* [a large etc.]
+
+
+Current version
+---------------
+
+v0.1 (April 2023)
+
+#####
+Index
+#####
+
+.. Hidden TOCs
+
+.. toctree::
+
+    userdoc/user_main
+    quick_start/qs_main
+    download/dl_main
+    github/git_main
+    changelog
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
