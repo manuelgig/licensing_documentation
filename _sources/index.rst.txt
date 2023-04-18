@@ -9,7 +9,7 @@ The *licensing* database
 
 .. admonition:: NOTE
 
-This documentation is **heavily** under construction
+  This documentation is **heavily** under construction
 
 
 This database contains rich, detailed information from a large set of
