@@ -2,5 +2,5 @@
 Download
 --------
 
-You can find the latest release of the `here <https://shorturl.at/fhG07>`_ as
-an sqlite db (elevation required).
+You can find the latest release of the `here <https://shorturl.at/fhG07>`_
+(SQLite, elevation needed).

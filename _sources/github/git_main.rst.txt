@@ -3,4 +3,4 @@ Get the Git Repository
 ----------------------
 
 The project's source code is available at https://github.com/manuelgig/licensing
-(access required)
+(elevation needed).
